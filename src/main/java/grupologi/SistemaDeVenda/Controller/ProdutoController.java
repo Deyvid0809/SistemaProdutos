@@ -1,5 +1,8 @@
-package grupologi.SistemaDeVenda.entity;
+package grupologi.SistemaDeVenda.Controller;
 import grupologi.SistemaDeVenda.Request.ProdutoCreateRequest;
+import grupologi.SistemaDeVenda.Service.ProdutoService;
+import grupologi.SistemaDeVenda.entity.Produto;
+
 import java.net.URI;
 
 import org.springframework.http.ResponseEntity;
@@ -29,7 +32,7 @@ public class ProdutoController {
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("produtos/{id}")
     public Produto buscar(@PathVariable Long id){
         return service.buscarPorId(id);
     }
